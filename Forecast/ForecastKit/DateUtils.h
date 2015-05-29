@@ -10,5 +10,6 @@
 
 @interface DateUtils : NSObject
 +(NSString *)weekDayWithDate:(NSDate *)date;
-
++(NSString*)detailTimeOfDate:(NSDate*) date;
++(NSString*)dateTimeOfDate:(NSDate*)date;
 @end

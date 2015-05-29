@@ -17,6 +17,13 @@
 		7D32B6D01AF9F85000734D7C /* LocationAPIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D32B6CF1AF9F85000734D7C /* LocationAPIHelper.m */; };
 		7D32B6D31AF9F9D800734D7C /* LocationResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D32B6D21AF9F9D800734D7C /* LocationResultModel.m */; };
 		7D32B6D61AF9FA1100734D7C /* GeonamesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D32B6D51AF9FA1100734D7C /* GeonamesModel.m */; };
+		7D561B101B12C6770044E15C /* WeatherDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D561B0E1B12C6770044E15C /* WeatherDetailViewController.m */; };
+		7D561B111B12C6770044E15C /* WeatherDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D561B0F1B12C6770044E15C /* WeatherDetailViewController.xib */; };
+		7D561B171B12D1D10044E15C /* NavigationViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D561B141B12D1D10044E15C /* NavigationViewDelegate.m */; };
+		7D561B181B12D1D10044E15C /* SSWDirectionalPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D561B161B12D1D10044E15C /* SSWDirectionalPanGestureRecognizer.m */; };
+		7D561B1B1B12D1DF0044E15C /* FlipTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D561B1A1B12D1DF0044E15C /* FlipTransitioning.m */; };
+		7D561B1F1B1876A00044E15C /* WeatherDetailRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D561B1D1B1876A00044E15C /* WeatherDetailRootViewController.m */; };
+		7D561B201B1876A00044E15C /* WeatherDetailRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D561B1E1B1876A00044E15C /* WeatherDetailRootViewController.xib */; };
 		7D7127A81AEE5ED600CFA7FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7127A71AEE5ED600CFA7FA /* main.m */; };
 		7D7127AB1AEE5ED600CFA7FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7127AA1AEE5ED600CFA7FA /* AppDelegate.m */; };
 		7D7127AE1AEE5ED600CFA7FA /* Forecast.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D7127AC1AEE5ED600CFA7FA /* Forecast.xcdatamodeld */; };
@@ -33,6 +40,8 @@
 		7D7127F91AEFD49C00CFA7FA /* HourlyWeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7127F81AEFD49C00CFA7FA /* HourlyWeatherModel.m */; };
 		7D7127FB1AEFDD6B00CFA7FA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D7127FA1AEFDD6B00CFA7FA /* CoreLocation.framework */; };
 		7D7127FD1AEFDD8B00CFA7FA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D7127FC1AEFDD8B00CFA7FA /* MapKit.framework */; };
+		7DA12E171B072CDB00D6B537 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DA12E191B072CDB00D6B537 /* Localizable.strings */; };
+		7DA12E211B07349A00D6B537 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DA12E231B07349A00D6B537 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +72,18 @@
 		7D32B6D21AF9F9D800734D7C /* LocationResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationResultModel.m; path = Model/LocationResultModel.m; sourceTree = "<group>"; };
 		7D32B6D41AF9FA1100734D7C /* GeonamesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeonamesModel.h; path = Model/GeonamesModel.h; sourceTree = "<group>"; };
 		7D32B6D51AF9FA1100734D7C /* GeonamesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeonamesModel.m; path = Model/GeonamesModel.m; sourceTree = "<group>"; };
+		7D561B0D1B12C6770044E15C /* WeatherDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherDetailViewController.h; path = Controller/WeatherDetailViewController.h; sourceTree = "<group>"; };
+		7D561B0E1B12C6770044E15C /* WeatherDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherDetailViewController.m; path = Controller/WeatherDetailViewController.m; sourceTree = "<group>"; };
+		7D561B0F1B12C6770044E15C /* WeatherDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WeatherDetailViewController.xib; path = Controller/WeatherDetailViewController.xib; sourceTree = "<group>"; };
+		7D561B131B12D1D10044E15C /* NavigationViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewDelegate.h; sourceTree = "<group>"; };
+		7D561B141B12D1D10044E15C /* NavigationViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewDelegate.m; sourceTree = "<group>"; };
+		7D561B151B12D1D10044E15C /* SSWDirectionalPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSWDirectionalPanGestureRecognizer.h; sourceTree = "<group>"; };
+		7D561B161B12D1D10044E15C /* SSWDirectionalPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSWDirectionalPanGestureRecognizer.m; sourceTree = "<group>"; };
+		7D561B191B12D1DF0044E15C /* FlipTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipTransitioning.h; sourceTree = "<group>"; };
+		7D561B1A1B12D1DF0044E15C /* FlipTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipTransitioning.m; sourceTree = "<group>"; };
+		7D561B1C1B1876A00044E15C /* WeatherDetailRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherDetailRootViewController.h; path = Controller/WeatherDetailRootViewController.h; sourceTree = "<group>"; };
+		7D561B1D1B1876A00044E15C /* WeatherDetailRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherDetailRootViewController.m; path = Controller/WeatherDetailRootViewController.m; sourceTree = "<group>"; };
+		7D561B1E1B1876A00044E15C /* WeatherDetailRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WeatherDetailRootViewController.xib; path = Controller/WeatherDetailRootViewController.xib; sourceTree = "<group>"; };
 		7D7127A21AEE5ED600CFA7FA /* Forecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7127A61AEE5ED600CFA7FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D7127A71AEE5ED600CFA7FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -70,7 +91,6 @@
 		7D7127AA1AEE5ED600CFA7FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7D7127AD1AEE5ED600CFA7FA /* Forecast.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Forecast.xcdatamodel; sourceTree = "<group>"; };
 		7D7127B51AEE5ED600CFA7FA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		7D7127B81AEE5ED600CFA7FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		7D7127BE1AEE5ED600CFA7FA /* ForecastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForecastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7127C31AEE5ED600CFA7FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D7127C41AEE5ED600CFA7FA /* ForecastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForecastTests.m; sourceTree = "<group>"; };
@@ -91,6 +111,13 @@
 		7D7127F81AEFD49C00CFA7FA /* HourlyWeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HourlyWeatherModel.m; path = Model/HourlyWeatherModel.m; sourceTree = "<group>"; };
 		7D7127FA1AEFDD6B00CFA7FA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7D7127FC1AEFDD8B00CFA7FA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7DA12E1A1B072CE700D6B537 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7DA12E1B1B072CE900D6B537 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		7DA12E1D1B0732D500D6B537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		7DA12E1E1B0732F100D6B537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7DA12E221B07349A00D6B537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7DA12E241B0734AE00D6B537 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7DA12E251B0734AE00D6B537 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		926BC135D660E7BE1077C607 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3A18A74AB47925D062A864 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +174,19 @@
 			name = Cell;
 			sourceTree = "<group>";
 		};
+		7D561B121B12D1C70044E15C /* NavigationDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				7D561B191B12D1DF0044E15C /* FlipTransitioning.h */,
+				7D561B1A1B12D1DF0044E15C /* FlipTransitioning.m */,
+				7D561B131B12D1D10044E15C /* NavigationViewDelegate.h */,
+				7D561B141B12D1D10044E15C /* NavigationViewDelegate.m */,
+				7D561B151B12D1D10044E15C /* SSWDirectionalPanGestureRecognizer.h */,
+				7D561B161B12D1D10044E15C /* SSWDirectionalPanGestureRecognizer.m */,
+			);
+			name = NavigationDelegate;
+			sourceTree = "<group>";
+		};
 		7D7127991AEE5ED600CFA7FA = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +230,8 @@
 			children = (
 				7D7127A61AEE5ED600CFA7FA /* Info.plist */,
 				7D7127A71AEE5ED600CFA7FA /* main.m */,
+				7DA12E191B072CDB00D6B537 /* Localizable.strings */,
+				7DA12E231B07349A00D6B537 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -238,10 +280,16 @@
 				7D32B6C01AF5213300734D7C /* Cell */,
 				7D7127D51AEE687600CFA7FA /* MainViewController.h */,
 				7D7127D61AEE687600CFA7FA /* MainViewController.m */,
-				7D7127D71AEE687600CFA7FA /* MainViewController.xib */,
 				7D32B6C91AF9F79000734D7C /* SearchLocationViewController.h */,
+				7D7127D71AEE687600CFA7FA /* MainViewController.xib */,
 				7D32B6CA1AF9F79000734D7C /* SearchLocationViewController.m */,
 				7D32B6CB1AF9F79000734D7C /* SearchLocationViewController.xib */,
+				7D561B0D1B12C6770044E15C /* WeatherDetailViewController.h */,
+				7D561B0E1B12C6770044E15C /* WeatherDetailViewController.m */,
+				7D561B0F1B12C6770044E15C /* WeatherDetailViewController.xib */,
+				7D561B1C1B1876A00044E15C /* WeatherDetailRootViewController.h */,
+				7D561B1D1B1876A00044E15C /* WeatherDetailRootViewController.m */,
+				7D561B1E1B1876A00044E15C /* WeatherDetailRootViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -260,6 +308,7 @@
 		7D7127F01AEE75A900CFA7FA /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				7D561B121B12D1C70044E15C /* NavigationDelegate */,
 				7D7127F11AEE75BB00CFA7FA /* Category */,
 			);
 			name = UIKit;
@@ -345,6 +394,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans",
 				Base,
 			);
 			mainGroup = 7D7127991AEE5ED600CFA7FA;
@@ -364,8 +414,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D32B6C51AF5215300734D7C /* DailyWeatherCell.xib in Resources */,
+				7DA12E211B07349A00D6B537 /* InfoPlist.strings in Resources */,
+				7D561B111B12C6770044E15C /* WeatherDetailViewController.xib in Resources */,
+				7DA12E171B072CDB00D6B537 /* Localizable.strings in Resources */,
 				7D7127B91AEE5ED600CFA7FA /* LaunchScreen.xib in Resources */,
 				7D32B6CD1AF9F79000734D7C /* SearchLocationViewController.xib in Resources */,
+				7D561B201B1876A00044E15C /* WeatherDetailRootViewController.xib in Resources */,
 				7D7127D91AEE687600CFA7FA /* MainViewController.xib in Resources */,
 				7D7127B61AEE5ED600CFA7FA /* Images.xcassets in Resources */,
 			);
@@ -422,13 +476,18 @@
 				7D7127AB1AEE5ED600CFA7FA /* AppDelegate.m in Sources */,
 				7D7127E21AEE6A5700CFA7FA /* DailyWeatherModel.m in Sources */,
 				7D32B6CC1AF9F79000734D7C /* SearchLocationViewController.m in Sources */,
+				7D561B181B12D1D10044E15C /* SSWDirectionalPanGestureRecognizer.m in Sources */,
 				7D32B6BF1AF515D600734D7C /* TemperatureTransformer.m in Sources */,
+				7D561B1F1B1876A00044E15C /* WeatherDetailRootViewController.m in Sources */,
 				7D7127F61AEFD43F00CFA7FA /* DailyDataModel.m in Sources */,
+				7D561B101B12C6770044E15C /* WeatherDetailViewController.m in Sources */,
 				7D7127DF1AEE68EA00CFA7FA /* WeatherModel.m in Sources */,
 				7D32B6C81AF5238B00734D7C /* DateUtils.m in Sources */,
 				7D32B6D01AF9F85000734D7C /* LocationAPIHelper.m in Sources */,
 				7D32B6D31AF9F9D800734D7C /* LocationResultModel.m in Sources */,
+				7D561B1B1B12D1DF0044E15C /* FlipTransitioning.m in Sources */,
 				7D7127AE1AEE5ED600CFA7FA /* Forecast.xcdatamodeld in Sources */,
+				7D561B171B12D1D10044E15C /* NavigationViewDelegate.m in Sources */,
 				7D7127F91AEFD49C00CFA7FA /* HourlyWeatherModel.m in Sources */,
 				7D7127E81AEE726400CFA7FA /* HourlyDataModel.m in Sources */,
 				7D32B6D61AF9FA1100734D7C /* GeonamesModel.m in Sources */,
@@ -460,9 +519,29 @@
 		7D7127B71AEE5ED600CFA7FA /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7D7127B81AEE5ED600CFA7FA /* Base */,
+				7DA12E1D1B0732D500D6B537 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		7DA12E191B072CDB00D6B537 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DA12E1A1B072CE700D6B537 /* en */,
+				7DA12E1B1B072CE900D6B537 /* zh-Hans */,
+				7DA12E1E1B0732F100D6B537 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		7DA12E231B07349A00D6B537 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DA12E221B07349A00D6B537 /* Base */,
+				7DA12E241B0734AE00D6B537 /* en */,
+				7DA12E251B0734AE00D6B537 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

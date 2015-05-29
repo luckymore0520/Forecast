@@ -8,8 +8,9 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "NavigationViewDelegate.h"
 @interface AppDelegate ()
-
+@property (nonatomic,strong) NavigationViewDelegate* navigationDelegate;
 @end
 
 @implementation AppDelegate
@@ -20,6 +21,8 @@
     MainViewController* mainViewController = [[MainViewController alloc] initWithNibName:NSStringFromClass([MainViewController class]) bundle:nil];
     UINavigationController* rootNav = [[UINavigationController alloc] initWithRootViewController:mainViewController];
     [_window setRootViewController:rootNav];
+    _navigationDelegate = [[NavigationViewDelegate alloc] initWithNavigationController:rootNav];
+    rootNav.delegate = _navigationDelegate;
     [_window makeKeyAndVisible];
     return YES;
 }

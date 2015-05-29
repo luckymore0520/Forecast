@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Forecast
+
+  Created by luck-mac on 15/5/16.
+  Copyright (c) 2015年 com.nju.luckymore. All rights reserved.
+*/
+
+"Alert_Title_LocationNotSupported" = "定位服务未开启";
+"Alert_Content_LocationNotSupported" = "请到系统设置界面打开定位服务或手动设置当前地点";
+"BT_OK" = "好的";

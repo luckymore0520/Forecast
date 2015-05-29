@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WeatherDetailRootViewController">
+            <connections>
+                <outlet property="scrollView" destination="5ZP-u9-O2W" id="OpC-lR-E3J"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="m1e-t9-q7u">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ZP-u9-O2W">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaj-Cc-fVJ">
+                    <rect key="frame" x="0.0" y="0.0" width="49" height="82"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="82" id="QDN-iD-5EF"/>
+                        <constraint firstAttribute="height" constant="82" id="TRg-O1-Goz"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="49" id="f3m-FV-iJ4"/>
+                        <constraint firstAttribute="width" constant="49" id="uBy-Fr-KOF"/>
+                    </constraints>
+                    <state key="normal" image="backNor">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onBackButtonClicked:" destination="-1" eventType="touchUpInside" id="9kI-jM-Pmm"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="5ZP-u9-O2W" secondAttribute="bottom" id="8mX-Jp-35M"/>
+                <constraint firstAttribute="trailing" secondItem="m1e-t9-q7u" secondAttribute="trailing" id="Ch9-ql-inP"/>
+                <constraint firstItem="gaj-Cc-fVJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HFG-DC-yFF"/>
+                <constraint firstAttribute="trailing" secondItem="5ZP-u9-O2W" secondAttribute="trailing" id="KaM-zh-fG7"/>
+                <constraint firstItem="m1e-t9-q7u" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="McN-pY-dRT"/>
+                <constraint firstAttribute="bottom" secondItem="m1e-t9-q7u" secondAttribute="bottom" id="VIV-B4-O3M"/>
+                <constraint firstItem="m1e-t9-q7u" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="W1s-DJ-E0m"/>
+                <constraint firstItem="5ZP-u9-O2W" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eDN-j6-E4e"/>
+                <constraint firstItem="5ZP-u9-O2W" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pg6-6W-acZ"/>
+                <constraint firstItem="gaj-Cc-fVJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="r5A-Xv-4xo"/>
+            </constraints>
+            <point key="canvasLocation" x="435" y="350"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="320" height="568"/>
+        <image name="backNor" width="9" height="15"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

@@ -19,4 +19,17 @@
     NSArray *weekDays = @[@"Error",@"Sun",@"Mon",@"Tues",@"Wed",@"Thur",@"Fri",@"Sat"];
     return weekDays[mDay];
 }
+
++(NSString*)detailTimeOfDate:(NSDate*) date {
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"hh-mm-ss"];
+    return [formatter stringFromDate:date];
+}
+
++ (NSString *)dateTimeOfDate:(NSDate *)date {
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MM-dd"];
+    return [formatter stringFromDate:date];
+}
+
 @end

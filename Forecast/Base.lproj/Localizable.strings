@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Forecast
+
+  Created by luck-mac on 15/5/16.
+  Copyright (c) 2015年 com.nju.luckymore. All rights reserved.
+*/
+
+"Alert_Title_LocationNotSupported" = "GPS not supported";
+"Alert_Content_LocationNotSupported" = "Please go to setting and turn on the GPS service or input the location where you are";
+"BT_OK" = "OK";

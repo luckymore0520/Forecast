@@ -12,8 +12,12 @@
 #import "DailyWeatherCell.h"
 #import "SearchLocationViewController.h"
 #import "MBProgressHud.h"
+#import "WeatherDetailRootViewController.h"
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
+
+#define LOCAL_LANG(LangKey) [[NSBundle mainBundle] localizedStringForKey:(LangKey) value:@"" table:nil]
+
 @interface MainViewController ()<WeatherApiDelegate,CLLocationManagerDelegate,UICollectionViewDataSource,UICollectionViewDelegate>
 //Label
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -34,6 +38,7 @@
 
 @property (strong,nonatomic) CLLocationManager* locationManager;
 @property (strong,nonatomic) NSArray* textLabelArray;
+@property (nonatomic) BOOL hasGotNewData;
 @end
 
 @implementation MainViewController
@@ -41,10 +46,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:YES];
+    
     if (![CLLocationManager locationServicesEnabled]) {
-        [[[UIAlertView alloc]initWithTitle:@"定位服务未打开" message:@"定位服务当前可能尚未打开，请设置打开！或者手动设置" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil]show];
+        [[[UIAlertView alloc]initWithTitle:LOCAL_LANG(@"Alert_Title_LocationNotSupported")
+                                   message:LOCAL_LANG(@"Alert_Content_LocationNotSupported")
+                                  delegate:self
+                         cancelButtonTitle:LOCAL_LANG(@"BT_OK")
+                         otherButtonTitles:nil, nil]show];
         return;
     }
+    _hasGotNewData = NO;
     _locationManager = [[CLLocationManager alloc] init];
     [_locationManager requestAlwaysAuthorization];
     //设置代理
@@ -129,14 +140,14 @@
 #pragma mark -CLLocationManagerDelegate
 - (void)locationManager:(CLLocationManager *)manager
      didUpdateLocations:(NSArray *)locations {
+    _hasGotNewData = YES;
     CLLocation *newLocation = [locations lastObject];
     CGFloat longitute = newLocation.coordinate.longitude;
     CGFloat latitude = newLocation.coordinate.latitude;
     // 获取当前所在的城市名
     CLGeocoder *geocoder = [[CLGeocoder alloc] init];
     //根据经纬度反向地理编译出地址信息
-    [geocoder reverseGeocodeLocation:newLocation completionHandler:^(NSArray *array, NSError *error)
-     {
+    [geocoder reverseGeocodeLocation:newLocation completionHandler:^(NSArray *array, NSError *error) {
          if (array.count > 0)
          {
              CLPlacemark *placemark = [array objectAtIndex:0];
@@ -154,11 +165,24 @@
     [manager stopUpdatingLocation];
 }
 
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error {
+    if (self.hasGotNewData) {
+        return;
+    }
+    [[[UIAlertView alloc]initWithTitle:LOCAL_LANG(@"Alert_Title_LocationNotSupported")
+                               message:LOCAL_LANG(@"Alert_Content_LocationNotSupported")
+                              delegate:self
+                     cancelButtonTitle:LOCAL_LANG(@"BT_OK")
+                     otherButtonTitles:nil, nil]show];
+          }
+
+
 #pragma mark -ApiDelegate
 - (void)receiveWeatherInfo:(WeatherModel *)weather {
     [[NSUserDefaults standardUserDefaults] setObject:weather.keyValues forKey:@"weather"];
     [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-    _weather = weather;
+    _weather = weather; 
     if (!weather) {
         return;
     }
@@ -200,4 +224,8 @@
 
 
 #pragma mark -CollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    WeatherDetailRootViewController* weatherDetailVC = [[WeatherDetailRootViewController alloc] initWithWeatherData:_weather.daily.data currentIndex:indexPath.row];
+    [self.navigationController pushViewController:weatherDetailVC animated:YES];
+}
 @end
